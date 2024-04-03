@@ -50,6 +50,13 @@ const Index = () => {
         Get to Know Each Other
       </Heading>
       <VStack spacing={6} align="stretch">
+        {question && (
+          <Box p={4} borderWidth={1} borderRadius="md" boxShadow="md" bg="white">
+            <Text fontSize="xl" fontWeight="bold">
+              {question}
+            </Text>
+          </Box>
+        )}
         <Box>
           <Text mb={2}>Length: {length < 50 ? "Short" : "Deep"}</Text>
           <Slider value={length} onChange={setLength} min={0} max={100} step={1}>
@@ -80,13 +87,6 @@ const Index = () => {
         <Button leftIcon={<FaRedo />} onClick={generateQuestion} size={buttonSize} colorScheme="blue">
           Generate Question
         </Button>
-        {question && (
-          <Box p={4} borderWidth={1} borderRadius="md" boxShadow="md" bg="white">
-            <Text fontSize="xl" fontWeight="bold">
-              {question}
-            </Text>
-          </Box>
-        )}
       </VStack>
     </Box>
   );
