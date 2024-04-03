@@ -46,7 +46,7 @@ const Index = () => {
 
   return (
     <Box p={4}>
-      <Heading size={headingSize} mb={4} textAlign="center">
+      <Heading size={headingSize} mb={4} textAlign="center" fontFamily="heading">
         Get to Know Each Other
       </Heading>
       <VStack spacing={6} align="stretch">
